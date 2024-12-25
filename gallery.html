@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Gallery</title>
+  <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+  <header class="gallery__header">
+    <h1>Gym Gallery</h1>
+    <button class="home__btn" onclick="goToHome()">Go to Home</button>
+  </header>
+
+  <main class="gallery__container">
+    <!-- Section 1 -->
+    <section class="gallery__section">
+      <h2>Workout Spaces</h2>
+      <div class="gallery__grid">
+        <img src="assets/client-1.jpg" alt="Gym Equipment" class="gallery__item">
+        <img src="assets/client-3.jpg" alt="Cardio Zone" class="gallery__item">
+        <img src="assets/client-3.jpg" alt="Weightlifting Area" class="gallery__item">
+        <img src="assets/client-3.jpg" alt="Yoga Studio" class="gallery__item">
+        <img src="assets/client-3.jpg" alt="Cycling Zone" class="gallery__item">
+        <img src="assets/client-3.jpg" alt="Reception Area" class="gallery__item">
+        <img src="assets/client-3.jpg" alt="Locker Room" class="gallery__item">
+        <img src="assets/client-3.jpg" alt="Outdoor Training Area" class="gallery__item">
+        <img src="assets/AD-4.png" alt="Sauna Room" class="gallery__item">
+        <img src="assets/AD-4.png" alt="Smoothie Bar" class="gallery__item">
+        <img src="assets/AD-4.png" alt="Reception Desk" class="gallery__item">
+        <img src="assets/AD-4.png" alt="Training Field" class="gallery__item">
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="gallery__section">
+      <h2>Facilities</h2>
+      <div class="gallery__grid">
+        <img src="assets/AD-4.png" alt="Modern Showers" class="gallery__item">
+        <img src="assets/AD-4.png" alt="Spacious Lockers" class="gallery__item">
+        <img src="assets/AD-4.png" alt="Relaxation Zone" class="gallery__item">
+        <img src="assets/AD-4.png" alt="Hydration Station" class="gallery__item">
+        <img src="assets/AD-4.png" alt="Sauna Room" class="gallery__item">
+        <img src="assets/AD-4.png" alt="Smoothie Bar" class="gallery__item">
+        <img src="assets/AD-4.png" alt="Reception Desk" class="gallery__item">
+        <img src="assets/AD-4.png" alt="Training Field" class="gallery__item">
+        <img src="assets/client-3.jpg" alt="Cycling Zone" class="gallery__item">
+        <img src="assets/client-3.jpg" alt="Reception Area" class="gallery__item">
+        <img src="assets/client-3.jpg" alt="Locker Room" class="gallery__item">
+        <img src="assets/client-3.jpg" alt="Outdoor Training Area" class="gallery__item">
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal">
+    <span class="modal__close">&times;</span>
+    <img class="modal__content" id="modalImage" alt="Expanded View">
+    <div class="modal__caption" id="modalCaption"></div>
+    <button class="modal__nav" id="modalPrev">❮</button>
+    <button class="modal__nav" id="modalNext">❯</button>
+  </div>
+
+  <script>
+    // JavaScript function to redirect to the home page
+    function goToHome() {
+      window.location.href = "index.html"; // Replace "index.html" with the path to your home page
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>

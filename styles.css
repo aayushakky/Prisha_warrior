@@ -7,6 +7,7 @@
   --text-light: #737373;
   --extra-light: #e5e5e5;
   --white: #ffffff;
+  --smoke-blue: #152129;
   --max-width: 1200px;
   --header-font: "Oswald", sans-serif;
 }
@@ -83,7 +84,7 @@ body {
 }
 
 nav {
-  background-color: var(--text-dark);
+  background-color: var(--smoke-blue);
   position: fixed;
   width: 100%;
   z-index: 9;
@@ -100,7 +101,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--text-dark);
+  background-color: var(--smoke-blue);
 }
 
 .nav__logo img {
@@ -125,7 +126,7 @@ nav {
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
-  background-color: var(--text-dark);
+  background-color: var(--smoke-blue);
   transition: 0.5s;
   z-index: -1;
   transform: translateY(-100%);
@@ -141,6 +142,7 @@ nav {
   white-space: nowrap;
   color: var(--white);
   transition: 0.3s;
+  font: bold;
 }
 
 .nav__links a:hover {
@@ -153,7 +155,7 @@ nav {
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.8)
     ),
-    url("assets/header.jpg");
+    url("assets/bg-3.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -240,6 +242,10 @@ nav {
 .about__card:nth-child(3) h4::before {
   content: "03";
 }
+
+/* .about__card:nth-child(4) h4::before {
+  content: "04";
+} */
 
 .about__card p {
   color: var(--text-light);
@@ -487,6 +493,10 @@ nav {
 
 .blog__card img {
   margin-bottom: 10px;
+  width: 100%; /* Set width to 100% of the card container */
+  height: 250px; /* Set a uniform height */
+  object-fit: cover; /* Ensures the image is cropped proportionally to fit */
+  border-radius: 5px; /* Optional: Adds a slight rounded effect */
 }
 
 .blog__card h4 {
@@ -506,6 +516,42 @@ nav {
   margin-top: 4rem;
   text-align: center;
 }
+
+/* .blog {
+  background-color: var(--text-dark);
+}
+
+.blog__container .section__header {
+  color: var(--white);
+}
+
+.blog__grid {
+  margin-top: 4rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.blog__card img {
+  margin-bottom: 10px;
+}
+
+.blog__card h4 {
+  max-width: calc(100% - 1rem);
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: var(--header-font);
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.blog__card:hover h4 {
+  color: var(--primary-color);
+}
+
+.blog__btn {
+  margin-top: 4rem;
+  text-align: center;
+} */
 
 .logo__banner {
   padding-block: 4rem;
