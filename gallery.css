@@ -1,11 +1,12 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 0.5;
 }
 
 h1, h2 {
@@ -14,68 +15,77 @@ h1, h2 {
 }
 
 header.gallery__header {
-    background-color: #2c3e50;
-    color: white;
+    background-color: #1e293b;
+    color: #fff;
     padding: 20px;
     text-align: center;
+    border-bottom: 4px solid #0f172a;
 }
 
 header.gallery__header h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 header.gallery__header p {
-    font-size: 1.2em;
-    margin: 0;
+    font-size: 1.2rem;
+    margin: 9px;
 }
 
 .home__btn {
-    margin-top: 10px;
-    padding: 10px 20px;
+    margin-top: 15px;
+    padding: 12px 25px;
     font-size: 1rem;
-    color: white;
+    color: #fff;
     background-color: #007bff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
 }
 
 .home__btn:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 /* Gallery Section Styles */
 .gallery__container {
-    padding: 20px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .gallery__section {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .gallery__section h2 {
-    margin-bottom: 20px;
-    font-size: 1.8em;
-    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: #1e293b;
+    border-bottom: 3px solid #0f172a;
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
 /* Grid Layout */
 .gallery__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
 .gallery__item {
     width: 100%;
-    height: auto; /* Auto height for responsive aspect ratio */
-    object-fit: cover; /* Maintain aspect ratio and crop if necessary */
+    height: 200px; /* Ensures uniform size */
+    object-fit: cover; /* Maintain aspect ratio and crop overflow */
     cursor: pointer;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .gallery__item:hover {
@@ -91,7 +101,7 @@ header.gallery__header p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -107,14 +117,15 @@ header.gallery__header p {
 .modal__caption {
     color: white;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 15px;
+    font-size: 1.1rem;
 }
 
 .modal__close {
     position: absolute;
     top: 20px;
     right: 30px;
-    font-size: 2em;
+    font-size: 2.5rem;
     color: white;
     cursor: pointer;
 }
@@ -124,22 +135,22 @@ header.gallery__header p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     border: none;
-    font-size: 2em;
-    padding: 10px 20px;
+    font-size: 2rem;
+    padding: 10px 15px;
     cursor: pointer;
     z-index: 1001;
     border-radius: 5px;
 }
 
 #modalPrev {
-    left: 10px;
+    left: 20px;
 }
 
 #modalNext {
-    right: 10px;
+    right: 20px;
 }
 
 .modal__nav:hover {
@@ -149,37 +160,37 @@ header.gallery__header p {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     header.gallery__header h1 {
-        font-size: 2em;
+        font-size: 2rem;
     }
 
     .gallery__section h2 {
-        font-size: 1.5em;
+        font-size: 1.6rem;
     }
 
     .gallery__grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
 
 @media screen and (max-width: 480px) {
     header.gallery__header {
-        padding: 10px;
+        padding: 15px;
     }
 
     header.gallery__header h1 {
-        font-size: 1.8em;
+        font-size: 1.8rem;
     }
 
     .gallery__section h2 {
-        font-size: 1.3em;
+        font-size: 1.3rem;
     }
 
     .gallery__grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 
     .home__btn {
-        padding: 8px 15px;
+        padding: 10px 20px;
         font-size: 0.9rem;
     }
 }
